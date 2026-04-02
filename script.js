@@ -21,6 +21,9 @@ navLinks.forEach(link => {
 function copyIP() {
     const ip = document.getElementById('server-ip').innerText;
     navigator.clipboard.writeText(ip).then(() => {
+                if (typeof ym !== 'undefined') {
+            ym(108357219, 'reachGoal', 'copy_ip');
+        }
         const message = document.getElementById('copy-message');
         message.classList.add('show');
         setTimeout(() => {
